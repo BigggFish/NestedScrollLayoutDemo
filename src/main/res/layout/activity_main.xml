@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bigggfish.nestscrollviewpager.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/id_main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.bigggfish.nestscrollviewpager.NestedScrollTopView
+        android:id="@id/id_main_topview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
+
+            <Button
+                android:id="@+id/btn_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="button" />
+
+        </LinearLayout>
+
+        <com.bigggfish.nestscrollviewpager.SimpleViewPagerIndicator
+            android:id="@id/id_main_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@android:color/white" />
+    </com.bigggfish.nestscrollviewpager.NestedScrollTopView>
+
+</FrameLayout>
